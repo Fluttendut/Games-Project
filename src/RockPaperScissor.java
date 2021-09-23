@@ -8,7 +8,7 @@ public class RockPaperScissor
         System.out.println("Do you want to play \n1.Singleplayer or 2. Multiplayer?" +
                 "\nPlease select 1 or 2.");
         int gameMode = sc.nextInt();
-        //Java is stupid and thinks my enter after 1 or 2 as gamemode counts as a nextLine.
+        //scanner bug
         sc.nextLine();
 
         //Multiplayer
@@ -33,7 +33,38 @@ public class RockPaperScissor
         int resultOne = (theGame(firstChoicePlayerOne, firstChoicePlayerTwo));
         int resultTwo = (theGame(secondChoicePlayerOne, secondChoicePlayerTwo));
         int resultThree = (theGame(thirdChoicePlayerOne, thirdChoicePlayerTwo));
-        System.out.println("Results are: Game1 " + resultOne + ", Game2 " + resultTwo + ", Game3 " + resultThree);
+        //System.out.println("Results are: Game1 " + resultOne + ", Game2 " + resultTwo + ", Game3 " + resultThree);
+
+        //Determining who wins round 3
+        if(resultOne == 1) {
+            System.out.println("Game 1: Player one wins");
+        }
+        if(resultOne == 2) {
+            System.out.println("Game 1: Player two wins");
+        }
+        if(resultOne == 0) {
+            System.out.println("Game 1: It's a draw");
+        }
+        //Determining who wins round 3
+        if(resultTwo == 1) {
+            System.out.println("Game 2: Player one wins");
+        }
+        if(resultTwo == 2) {
+            System.out.println("Game 2: Player two wins");
+        }
+        if(resultTwo == 0) {
+            System.out.println("Game 2: It's a draw");
+        }
+        //Determining who wins round 3
+        if(resultThree == 1) {
+            System.out.println("Game 3: Player one wins");
+        }
+        if(resultThree == 2) {
+            System.out.println("Game 3: Player two wins");
+        }
+        if(resultThree == 0) {
+            System.out.println("Game 3: It's a draw");
+        }
     }
     public static int theGame(String playerOne, String playerTwo) {
 
