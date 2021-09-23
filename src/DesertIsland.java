@@ -8,6 +8,7 @@ public class DesertIsland
         Scanner sc = new Scanner(System.in);
         String[] options = {"girlfriend", "coffee machine", "Netflix", "sofa", "running shoes", "guitar", "candy", "dog", "book", "beer"};
 
+        //
         int[] intArray = new int[10];
         int intArraySize = intArray.length;
 
